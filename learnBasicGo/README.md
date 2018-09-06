@@ -9,3 +9,11 @@ goLang 的运算符和其他语言类似, 只有 & 变量存储地址 * 指针�
 if else switch 和其他语言类似, 新增的 select 判断, 类似于 switch case . 只是 case 中是 io 操作
 #### 5. 循环判断语句
 基本和其他语言一样 for 循环
+#### 6. 函数
+语法: 
+```$xslt
+func function_name( [parameter list] ) [return_types] {
+   函数体
+}
+```
+go 除了普通的函数外还有匿名函数并具有闭包功能, 可以类似其他语言的的元祖返回多个值
