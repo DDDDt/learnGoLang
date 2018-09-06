@@ -34,4 +34,29 @@ func (variable_name variable_data_type) function_name() [return_type]{
 
 #### 9. 数组
 数组的形式基本和其他语言差不多
+#### 10.指针
+指针在以前接触过的语言中没有接触过, 使用 & 来获取指针地址, 使用 * 来获取指针的值, 使用 nil 来辨识空指针
+#### 11.结构体
+语法: 
+```$xslt
+type struct_variable_type struct {
+   member definition;
+   member definition;
+   ...
+   member definition;
+}
+```
+类似于 java 的 javabean
+#### 12.切片 slice
+语法: 
+```$xslt
+var identifier []type
 
+var slice1 []type = make([]type, len)
+make([]T, length, capacity)
+也可以简写为
+
+slice1 := make([]type, len)
+```
+go 数组的长度是不可改变的, 在一些特定的场景下，我们需要更灵活的方法, 使用切片可以满足这些需求
+切片不需要说明长度
