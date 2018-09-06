@@ -60,3 +60,25 @@ slice1 := make([]type, len)
 ```
 go 数组的长度是不可改变的, 在一些特定的场景下，我们需要更灵活的方法, 使用切片可以满足这些需求
 切片不需要说明长度
+
+#### 13.range
+range 关键字用语 for 循环中迭代数组(array), 切片(slice)，链表(channel)或集合(map) 的元素
+#### 14.map
+语法: 
+```$xslt
+/* 声明变量，默认 map 是 nil */
+var map_variable map[key_data_type]value_data_type
+
+/* 使用 make 函数 */
+map_variable = make(map[key_data_type]value_data_type)
+```
+map 集合类似于java中的map 和 python 中的字典, 使用 range 可以遍历. 是无需的键值对的集合
+#### 15.递归函数
+go 的递归和其他语言类似, 都是在方法或者函数本身调用本身
+#### 16.类型转换
+语法: 
+```$xslt
+type_name(expression)
+```
+用语将一种数据类型的变量转换为另外一种类型的变量,和 java 类似可以在变量前加括号强制转换
+#### 17.接口
