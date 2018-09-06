@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*条件语句*/
 func main() {
 
@@ -42,6 +44,20 @@ func main() {
 	}
 
 	// select case 监听 IO 操作,会一直等待某个 case 语句完成才会退出
-	select {}
+
+	var c1, c2, c3 chan int
+	var i1, i2 int
+
+	select {
+	case i1 = <-c1:
+		fmt.Println("i1", i1)
+	case c2 <- i2:
+		fmt.Println("i2")
+	case i3, ok := (<-c3):
+		fmt.Println(i3, ok)
+	default:
+		fmt.Println("错误")
+
+	}
 
 }

@@ -6,3 +6,4 @@
 #### 3. 运算符
 goLang 的运算符和其他语言类似, 只有 & 变量存储地址 * 指针变量. 目前尚未接触过
 #### 4. 条件语句
+if if else switch 和其他语言类似, 新增的 select 判断, 类似于 switch case . 只是 case 中是 io 操作
