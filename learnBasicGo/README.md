@@ -82,3 +82,12 @@ type_name(expression)
 ```
 用语将一种数据类型的变量转换为另外一种类型的变量,和 java 类似可以在变量前加括号强制转换
 #### 17.接口
+golang 的接口和 java 的接口 和 scala 的特质有些不一样,其他任何类型只有实现了这些方法就是实现了这个接口
+#### 18.错误处理
+定义: 
+```$xslt
+type error interface {
+    Error() string
+}
+```
+错误处理
