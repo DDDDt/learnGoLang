@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*错误处理*/
 type DivideError struct {
@@ -25,8 +27,27 @@ func Divide(varDividee int, varDivider int) (result int, errorMsh string) {
 
 }
 
+// 使用 panic recover defer
+func f() {
+	defer func() {
+		fmt.Println("b")
+		if err := recover(); err != nil {
+			fmt.Println("c")
+			fmt.Println(err)
+		}
+		fmt.Println("d")
+	}()
+	fmt.Println("a")
+	panic("a bug occur")
+	fmt.Println("e")
+
+}
+
 func main() {
 
-	fmt.Println(Divide(0, 1))
+	//errors.New("直接错误")
+	//fmt.Println(Divide(0, 1))
+
+	f()
 
 }
