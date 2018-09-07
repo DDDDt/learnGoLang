@@ -45,4 +45,25 @@ func main() {
 
 	// 定义 object 类型
 
+	var per interface{} = person{"dt", 25}
+
+	value := reflect.ValueOf(per)
+	typ := reflect.TypeOf(per)
+	fmt.Println(value)
+	fmt.Println(typ)
+
+	knd := value.Kind()
+	// struct
+	fmt.Println(knd)
+	fmt.Println(value.NumField())
+	for i := 0; i < value.NumField(); i++ {
+
+		fmt.Println(value.Field(i))
+
+	}
+
+	// 注意 只有被导出字段(首字母大写)才是可设置的
+
+	// 调用结构体重的方法 -> reflect.Value.Method(n).call(nil)
+
 }
