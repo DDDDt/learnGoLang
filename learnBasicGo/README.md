@@ -125,3 +125,6 @@ Go 语言的主要的功能在于令人简易使用的并行设计, 这个方法
 channel, 管道, 队列, 先进先出, 用来异步传递数据. channel 加上 goroutine , 就形成了一种既简单又强大的请求处理模型, 使高并发和线程同步质检代码的编写变得异常简单
 线程安全, 多个 goroutine 同时访问, 不需要加锁
 channel 是有类型的, 一个整数的 channel 只能存放整数
+#### net & net/http
+net 包提供了可移植的网络 I/O 接口, 包括 TCP/IP,UDP,域名解析和UNIX 域 socket
+虽然本包提供了对网络原语的访问, 大部分使用只需要 Dial,Listen和Accept 函数提供的基本接口;以及相关的Conn和Listener接口。crypto/tls包提供了相同的接口和类似的Dial和Listen函数
