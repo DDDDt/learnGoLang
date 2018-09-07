@@ -1,6 +1,6 @@
 package main
 
-/*net*/
+/*客户端*/
 
 func main() {
 
