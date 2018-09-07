@@ -128,3 +128,5 @@ channel 是有类型的, 一个整数的 channel 只能存放整数
 #### net & net/http
 net 包提供了可移植的网络 I/O 接口, 包括 TCP/IP,UDP,域名解析和UNIX 域 socket
 虽然本包提供了对网络原语的访问, 大部分使用只需要 Dial,Listen和Accept 函数提供的基本接口;以及相关的Conn和Listener接口。crypto/tls包提供了相同的接口和类似的Dial和Listen函数
+#### json
+主要使用 json Marshal 和 Unmarshal
