@@ -83,6 +83,12 @@ type_name(expression)
 用语将一种数据类型的变量转换为另外一种类型的变量,和 java 类似可以在变量前加括号强制转换
 #### 17.接口
 golang 的接口和 java 的接口 和 scala 的特质有些不一样,其他任何类型只有实现了这些方法就是实现了这个接口
+空接口或者最小接口, 不包含任何方法, 它对实现不做任何要求
+语法: 
+```cgo
+/*赋任何类型的值*/
+type Any interface{} 
+```
 #### 18.错误处理
 定义: 
 ```$xslt
@@ -91,3 +97,17 @@ type error interface {
 }
 ```
 错误处理
+#### 19. 反射 reflect
+reflect 包实现了运行时反射, 允许程序操作任意类型的对象
+语法: 
+```cgo
+/*TypeOf返回接口中保存的值的类型，TypeOf(nil)会返回nil。*/
+func TypeOf(i interface{}) Type
+/*ValueOf返回一个初始化为i接口保管的具体值的Value，ValueOf(nil)返回Value零值。*/
+func ValueOf(i interface{}) Value
+/*获取变量的类别, 返回一个常量*/
+reflect.Value.Kind
+/*转换成 interface{} 类型*/
+reflect.Value.Interface()
+
+```

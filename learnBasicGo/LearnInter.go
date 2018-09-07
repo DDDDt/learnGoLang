@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*接口*/
 type inter interface {
@@ -27,8 +29,15 @@ func (t test) max(a, b int) (c int) {
 
 func main() {
 
+	var i inter
+
 	t := new(test)
 	t.test()
 	fmt.Println(t.max(1, 2))
+	i = t
+	// 判断是属于哪个接口
+	if v, ok := i.(inter); ok {
+		fmt.Println(v, ok)
+	}
 
 }
