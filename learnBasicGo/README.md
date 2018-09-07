@@ -112,3 +112,16 @@ reflect.Value.Interface()
 
 ```
 #### 20. 文件读取 os.File
+
+参看文档: `https://www.cnblogs.com/suoning/p/7225096.html`
+
+#### 21.Goroutine
+语法: 
+```cgo
+go 
+```
+Go 语言的主要的功能在于令人简易使用的并行设计, 这个方法叫做 Goroutine, 通过 
+#### channel
+channel, 管道, 队列, 先进先出, 用来异步传递数据. channel 加上 goroutine , 就形成了一种既简单又强大的请求处理模型, 使高并发和线程同步质检代码的编写变得异常简单
+线程安全, 多个 goroutine 同时访问, 不需要加锁
+channel 是有类型的, 一个整数的 channel 只能存放整数
